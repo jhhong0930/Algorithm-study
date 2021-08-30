@@ -84,3 +84,78 @@ class Solution {
 }
 
 
+키패드 누르기 (1시간 반소요)
+
+class Solution {
+    public String solution(int[] numbers, String hand) {
+        
+        int[] rightF ={3,2} ; //오른손 현재위치
+        int[] leftF = {3,0}; //왼손 현재위치              
+        String answer = "";      
+               
+        int distantL=0;
+        int distantR=0;
+            
+         //1,2,3,4,5,6,7,8,9,*,0,#
+        int[][] pad = {{1,2,3},
+                       {4,5,6},
+                       {7,8,9},
+                       {10,0,12}};  
+        
+           
+              for(int n=0; n<numbers.length; n++){
+                 for(int i=0; i<pad.length; i++){
+                     for(int j=0; j<pad[i].length; j++){
+                    
+                         if(numbers[n]==pad[i][j]){
+                             
+                             if(numbers[n]%3==1){
+                                 leftF[0]=i;
+                                 leftF[1]=j;
+                                 answer+="L";
+                                 
+                             }  else if(numbers[n]%3==0 && numbers[n]!=0){
+                                 
+                                 rightF[0]=i;
+                                 rightF[1]=j;
+                                 answer+="R";
+                                 
+                             }  else {
+                                distantL= Math.abs(leftF[0]-i)+Math.abs(leftF[1]-j);
+                                distantR= Math.abs(rightF[0]-i)+Math.abs(rightF[1]-j);
+                                 
+                                 if(distantL<distantR){
+                                      leftF[0]=i;
+                                     leftF[1]=j;
+                                     answer+="L";
+                                 } else  if(distantL>distantR){
+                                      rightF[0]=i;
+                                      rightF[1]=j;
+                                      answer+="R";
+                                 } else {
+                                     if(hand.equals("right")){
+                                      rightF[0]=i;
+                                      rightF[1]=j;
+                                      answer+="R";
+                                     } else{
+                                           leftF[0]=i;
+                                     leftF[1]=j;
+                                     answer+="L";
+                                     }
+                                 }
+                                 
+                                 
+                             }                       
+                             
+                             
+                         }
+                         
+                       }    
+                    }      
+                }
+         
+       
+        return answer;
+    }
+}
+

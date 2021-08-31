@@ -159,3 +159,51 @@ class Solution {
     }
 }
 
+
+크레인 인형뽑기 (2시간 반)
+
+import java.util.Stack;
+
+class Solution {
+    public int solution(int[][] board, int[] moves) {
+        
+     Stack<Integer> buket = new Stack<Integer>();
+    
+     int count=0;
+        
+    for(int m=0; m<moves.length; m++){
+        loop:
+        for(int i=0; i<board.length; i++){
+            for(int j=0; j<board[i].length; j++){
+               
+                    if(j+1==moves[m]&&board[i][j]!=0){
+                        
+                    if(!buket.empty()){
+                        
+                        if(buket.peek()==board[i][j]){
+                             buket.pop();
+                             count+=2;                             
+                            
+                        } else{
+                         buket.push(board[i][j]); 
+                      
+                        }
+                    } 
+                      else{                        
+                         buket.push(board[i][j]); 
+                         
+                    }
+                         board[i][j]=0;                       
+                        break loop;
+               }   
+            }
+           
+        }         
+    }       
+       
+        int answer = count;
+        return answer;
+    }
+    
+    
+}

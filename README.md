@@ -1,6 +1,9 @@
 # algorithm-study
 각자 이름으로 브렌치 만드신 후 해당 주차 스터디 진행 전까지 푸시 하시면 됩니다  
 
+## 각 주차별 jisoo 브랜치의 접근 풀이
+🧡 1주차 : https://github.com/jhhong0930/algorithm-study/blob/jisoo/1st_wk/README.md
+
 ### 1주차 문제
 - 로또의 최고 순위와 최저 순위 https://programmers.co.kr/learn/courses/30/lessons/77484
 - 신규 아이디 추천 https://programmers.co.kr/learn/courses/30/lessons/72410

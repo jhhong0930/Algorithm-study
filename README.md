@@ -244,7 +244,7 @@ class Solution { public int solution(String s) {
 }
 
 
-
+신규 아이디 추천
 
 class Solution {
     public String solution(String new_id) {

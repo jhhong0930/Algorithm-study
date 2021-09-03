@@ -242,3 +242,39 @@ class Solution { public int solution(String s) {
     return answer;
 }
 }
+
+
+
+
+class Solution {
+    public String solution(String new_id) {
+        String answer = "";
+        String temp = new_id.toLowerCase();
+
+        temp = temp.replaceAll("[^-_.a-z0-9]","");
+      
+        temp = temp.replaceAll("[.]{2,}",".");     
+      
+        temp = temp.replaceAll("^[.]|[.]$","");             
+      
+        if(temp.isEmpty()){
+            temp="a";
+        }
+       
+        if(temp.length()>15){
+            temp=temp.substring(0,15);
+            temp=temp.replaceAll("[.]$","");
+        }
+      
+        
+        if(temp.length()<3){
+            while(temp.length()!=3){                
+                temp+=temp.substring(temp.length()-1);
+                System.out.println(temp);
+            }
+        }
+        
+        answer=temp;
+        return answer;
+    }
+}

@@ -44,3 +44,24 @@
 4) system.arraycopy로 특정 구간만 복사시키기
 5)Arrays.sort의 기본은 asc이므로 이를 이용해서 정렬
 6)commands[행][2]-1을 정렬된 배열의 k에 적용해서 k번째 수가져와서 answer배열에 추가
+
+### 6. 모의고사
+
+1) 1번, 2번, 3번 수포자의 패턴은 아래와 같다
+        int[] pattern1={1,2,3,4,5};//i%5
+        int[] pattern2={2,1,2,3,2,4,2,5};//i%8
+        int[] pattern3={3,3,1,1,2,2,4,4,5,5};//i%10
+i%~로 한 이유는 우리가 answers.length만큼 배열을 따로 만드는 것보다
+`i%길이`로 인덱스만 갈아주는 것이 보다 효율적이라 판단->`one, two, three`
+
+2) 가변적으로 값을 추가하기 위해서 ArrayList사용
+
+3) 수포자 1/2/3 중 한명만이 답을 맞출 수 있는 것이 아니라 if-elseif로 처리하지 않고
+if로 케이스를 만들어서 비교하고, 수포자별 정답수를 key-value로 관리하기 위해서
+Map<Integer(수포자번호),Integer(맞힌 문제수)>로 관리
+
+4) List<Map.Entry>로 value에 대해서 내림차순 정렬
+
+5) 우선 4)를 기준으로 최댓값인 key를 ArrayList<Integer> answer에 담기
+
+6) 그 다음부터는 최댓값과 같은 경우만   ArrayList<Integer> answer에 담기

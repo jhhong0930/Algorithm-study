@@ -3,7 +3,7 @@
 
 ## 각 주차별 jisoo 브랜치의 접근 풀이
 🧡 1주차 : https://github.com/jhhong0930/algorithm-study/blob/jisoo/1st_wk/README.md
-
+🧡 2주차 : https://github.com/jhhong0930/algorithm-study/blob/jisoo/2nd_wk/README.md
 ### 1주차 문제
 - 로또의 최고 순위와 최저 순위 https://programmers.co.kr/learn/courses/30/lessons/77484
 - 신규 아이디 추천 https://programmers.co.kr/learn/courses/30/lessons/72410

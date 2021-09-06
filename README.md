@@ -234,21 +234,6 @@ class Solution {
 }
 
 
-숫자 문자열과 영단어 (5분)
-
-class Solution { public int solution(String s) {
-
-    String[] re ={"zero","one","two","three","four","five","six","seven","eight","nine"};
-    
-    for(int a=0; a<re.length; a++){
-       s=s.replace(re[a],Integer.toString(a));
-    }
-    
-    int answer = Integer.parseInt(s);
-    
-    return answer;
-}
-}
 
 
 신규 아이디 추천

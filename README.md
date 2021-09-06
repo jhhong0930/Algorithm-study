@@ -293,6 +293,7 @@ class Solution {
 
 
 음양더하기(5분소요)
+
 class Solution {
     public int solution(int[] absolutes, boolean[] signs) {
         int answer = 0;
@@ -309,6 +310,7 @@ class Solution {
 }
 
 내적(3분소요)
+
 class Solution {
     public int solution(int[] a, int[] b) {
         int answer = 0;
@@ -318,6 +320,38 @@ class Solution {
         }
         
         
+        return answer;
+    }
+}
+
+소수 만들기(1시간 30분소요)
+
+class Solution {
+    public int solution(int[] nums) {
+        int answer = 0;
+        int result=0;
+        for(int i=0; i<nums.length-2; i++){
+
+            for(int k=i+1; k<nums.length-1;k++){
+                           
+                for(int l=k+1; l<nums.length; l++){
+                    
+                    result  = nums[i]+nums[k]+nums[l];
+                    
+                    for(int z=2; z<=result; z++){
+                       
+                        if(result%z==0&&z!=result){
+                             break;                         
+                       } else if(result==z){
+                           answer+=1;
+                       }
+                                 
+                    }
+                }
+              }
+            }
+       
+
         return answer;
     }
 }

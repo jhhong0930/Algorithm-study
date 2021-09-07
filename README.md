@@ -393,3 +393,119 @@ class Solution {
         return answer;
     }
 }
+
+
+모의고사
+
+
+
+
+class Solution {
+    public int[] solution(int[] answers) {
+               
+        int[] answer = {};
+        
+        
+        int[] firstP = {1,2,3,4,5};
+        int first=0;
+        
+        int[] secondP = {2,1,2,3,2,4,2,5};        
+        int second=0;
+        
+        int[] thirdP = {3,3,1,1,2,2,4,4,5,5};
+        int third=0;
+        
+        int f=0;
+        int s=0;  
+        int t=0;  
+        
+        for(int i=0; i<answers.length; i++){  
+            
+            if(answers[i]==firstP[f]){
+                first+=1;
+            }
+            
+            f+=1;
+            
+            if(f>=5){
+                f-=5;
+            }
+            
+            if(answers[i]==secondP[s]){
+                second+=1;
+            }
+            
+            s+=1;
+            
+            if(s>=8){
+                s-=8;
+            }
+            
+            if(answers[i]==thirdP[t]){
+                third+=1;
+            }
+            
+            t+=1;
+            
+            if(t>=10){
+                t-=10;
+            }     
+        }
+        
+        int fTos=Integer.compare(first,second);
+        int fTot=Integer.compare(first,third);
+        int sTot=Integer.compare(second,third);
+        
+        if(fTos==0&&sTot==1){
+            int[] temp= new int[2];
+            temp[0]=1;
+            temp[1]=2;
+            answer = temp;
+            
+        }
+        
+         if(fTos==-1&&sTot==0){
+            int[] temp= new int[2];
+            temp[0]=2;
+            temp[1]=3;
+            answer = temp;
+            
+        }
+        
+        if(fTos==1&&fTot==0){
+            int[] temp= new int[2];
+            temp[0]=1;
+            temp[1]=3;
+            answer = temp;
+            
+        }
+      
+           
+        if(fTot==-1&&sTot==1||fTot==0&&sTot==1||fTos==-1&&fTot==1){
+             int[] temp= new int[1];
+             temp[0]=2;
+             answer = temp;
+        }
+        if(fTos==1&&sTot==1||fTos==1&&sTot==0||fTot==1&&sTot==-1){
+            int[] temp= new int[1];
+             temp[0]=1;
+             answer = temp;
+        }
+        if(fTot==-1&&fTos==1||fTot==-1&&fTos==0||sTot==-1&&fTos==-1){
+            int[] temp= new int[1];
+             temp[0]=3;
+             answer = temp;
+        }
+        
+         if(fTot==0&&sTot==0){
+            int[] temp= new int[3];
+             temp[0]=1;
+             temp[1]=2;
+             temp[2]=3;
+             answer = temp;
+        }
+        
+        return answer;
+    }
+}
+

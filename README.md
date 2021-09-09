@@ -509,3 +509,53 @@ class Solution {
     }
 }
 
+
+
+
+체육복
+
+import java.util.*;
+
+class Solution {
+    public int solution(int n, int[] lost, int[] reserve) {
+      
+       int answer = 0;
+        int count =0;  
+        Arrays.sort(lost);
+        Arrays.sort(reserve);
+        
+        
+         for(int i=0; i<reserve.length; i++){
+            for(int j=0; j<lost.length; j++){
+           
+                
+            if(reserve[i]!=0&&lost[j]!=0&&Math.abs(reserve[i]-lost[j])==0){
+                reserve[i]=0;
+                lost[j]=0;
+                
+                count+=1;
+               
+             }
+            }
+        }
+        
+        
+        
+        for(int i=0; i<reserve.length; i++){
+            for(int j=0; j<lost.length; j++){
+           
+                
+            if(reserve[i]!=0&&lost[j]!=0&&Math.abs(reserve[i]-lost[j])<=1){
+                reserve[i]=0;
+                lost[j]=0;
+                
+                count+=1;
+               
+             }
+            }
+        }
+        answer=n-lost.length+count;        
+        
+        return answer;
+    }
+}

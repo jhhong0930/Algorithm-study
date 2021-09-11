@@ -280,12 +280,19 @@ class Solution {
 음양더하기(5분소요)
 
 class Solution {
+
     public int solution(int[] absolutes, boolean[] signs) {
+    
         int answer = 0;
+        
         for(int i=0; i<absolutes.length; i++){
+        
             if(signs[i]==true){
+            
             answer+=absolutes[i];
+            
            }  else{
+           
                 answer-=absolutes[i];
             }
            
@@ -297,10 +304,13 @@ class Solution {
 내적(3분소요)
 
 class Solution {
+
     public int solution(int[] a, int[] b) {
+    
         int answer = 0;
         
         for(int i=0;  i<a.length;  i++){
+        
             answer+=a[i]*b[i];
         }
         
@@ -312,9 +322,13 @@ class Solution {
 소수 만들기(1시간 30분소요)
 
 class Solution {
+
     public int solution(int[] nums) {
+    
         int answer = 0;
+        
         int result=0;
+        
         for(int i=0; i<nums.length-2; i++){
 
             for(int k=i+1; k<nums.length-1;k++){
@@ -348,9 +362,13 @@ class Solution {
 import java.util.*;
 
 class Solution {
-    public String solution(String[] participant, String[] completion) {       
+
+    public String solution(String[] participant, String[] completion) {      
+    
          String answer = "";
+         
       Arrays.sort(participant);
+      
       Arrays.sort(completion);
        
         for(int i=0; i<completion.length; i++){
@@ -377,6 +395,7 @@ import java.util.Arrays;
 
 
 class Solution {
+
     public int[] solution(int[] array, int[][] commands) {
         
         int[] answer = new int[commands.length];
@@ -398,9 +417,8 @@ class Solution {
 모의고사
 
 
-
-
 class Solution {
+
     public int[] solution(int[] answers) {
                
         int[] answer = {};
@@ -517,6 +535,7 @@ class Solution {
 import java.util.*;
 
 class Solution {
+
     public int solution(int n, int[] lost, int[] reserve) {
       
        int answer = 0;

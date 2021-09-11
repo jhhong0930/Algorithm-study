@@ -18,3 +18,12 @@
 - K번째수 https://programmers.co.kr/learn/courses/30/lessons/42748
 - 모의고사 https://programmers.co.kr/learn/courses/30/lessons/42840
 - 체육복 https://programmers.co.kr/learn/courses/30/lessons/42862
+
+---
+
+### 3주차 문제
+- 폰켓몬 https://programmers.co.kr/learn/courses/30/lessons/1845
+- 실패율 https://programmers.co.kr/learn/courses/30/lessons/42889
+- 약수의 개수와 덧셈 https://programmers.co.kr/learn/courses/30/lessons/77884
+- 3진법 뒤집기 https://programmers.co.kr/learn/courses/30/lessons/68935
+- 예산 https://programmers.co.kr/learn/courses/30/lessons/12982

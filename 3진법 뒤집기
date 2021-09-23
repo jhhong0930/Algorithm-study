@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+class Solution {
+    public int solution(int n) {
+       
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        
+        while(n>=1){
+            a.add(n%3);                     
+            n/=3; 
+        }
+        
+       int result =0;
+       int mul =1;
+        
+       for(int i=a.size()-1; i>=0; i--){     
+           
+           result+=(a.get(i)*mul);
+           
+           mul*=3;    
+
+       }
+        
+      int answer = result;
+    
+      return answer;
+    }
+}

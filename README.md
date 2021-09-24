@@ -22,3 +22,22 @@
 - K번째수 https://programmers.co.kr/learn/courses/30/lessons/42748
 - 모의고사 https://programmers.co.kr/learn/courses/30/lessons/42840
 - 체육복 https://programmers.co.kr/learn/courses/30/lessons/42862
+
+---
+
+### 3주차 문제
+- 폰켓몬 https://programmers.co.kr/learn/courses/30/lessons/1845
+- 실패율 https://programmers.co.kr/learn/courses/30/lessons/42889
+- 약수의 개수와 덧셈 https://programmers.co.kr/learn/courses/30/lessons/77884
+- 3진법 뒤집기 https://programmers.co.kr/learn/courses/30/lessons/68935
+- 예산 https://programmers.co.kr/learn/courses/30/lessons/12982
+
+---
+
+### 4주차 문제
+- 두 개 뽑아서 더하기 https://programmers.co.kr/learn/courses/30/lessons/68644
+- 2016년 https://programmers.co.kr/learn/courses/30/lessons/12901
+- 같은 숫자는 싫어 https://programmers.co.kr/learn/courses/30/lessons/12906
+- 나누어 떨어지는 숫자 배열 https://programmers.co.kr/learn/courses/30/lessons/12910
+- 문자열 내 마음대로 정렬하기 https://programmers.co.kr/learn/courses/30/lessons/12915
+

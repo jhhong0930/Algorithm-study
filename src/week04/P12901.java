@@ -9,7 +9,7 @@ import java.util.Locale;
 
 public class P12901 {
 
-    public String solution(int a, int b) {
+    static String solution(int a, int b) {
 
         Calendar cal = Calendar.getInstance();
 
@@ -20,6 +20,11 @@ public class P12901 {
         SimpleDateFormat sdf = new SimpleDateFormat("E", Locale.ENGLISH);
 
         return sdf.format(date).toUpperCase();
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(solution(5, 24));
     }
 
 }

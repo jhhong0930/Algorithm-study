@@ -36,3 +36,10 @@
 - 같은 숫자는 싫어 https://programmers.co.kr/learn/courses/30/lessons/12906
 - 나누어 떨어지는 숫자 배열 https://programmers.co.kr/learn/courses/30/lessons/12910
 - 문자열 내 마음대로 정렬하기 https://programmers.co.kr/learn/courses/30/lessons/12915
+
+---
+
+### 5주차 문제
+- 문자열 압축 https://programmers.co.kr/learn/courses/30/lessons/60057
+- 오픈채팅방 https://programmers.co.kr/learn/courses/30/lessons/42888
+- 카카오프랜즈 컬러링북 https://programmers.co.kr/learn/courses/30/lessons/1829

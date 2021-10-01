@@ -1,0 +1,46 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
+class Solution {
+    public String[] solution(String[] record) {
+        
+        ArrayList<String[]> list = new ArrayList<String[]>(); // 행동, 고유번호, 이름을 나눠담을 배열
+        HashMap<String, String> map = new HashMap<String,String>(); // 고유번호, 이름 매핑
+        ArrayList<String> move=new ArrayList<String>(); // 행동
+        
+        //record 읽어와서 " " 기준으로 list에 나눠담기
+        for(int i=0; i<record.length; i++){
+             String[] emt=record[i].split(" ");
+            list.add(emt);
+            //행동이 enter와 change일경우 map에 고유번호와 이름 매핑
+            if(list.get(i)[0].equals("Enter")||list.get(i)[0].equals("Change")){
+            map.put(list.get(i)[1],list.get(i)[2]);        
+            }
+            
+        }
+        
+        //행동이 enter와 leave일 경우 고유 번호에 따른 이름으로 move에 문자열 저장
+        for(int i=0; i<list.size(); i++){
+            switch(list.get(i)[0]){
+                case "Enter":                     
+                    move.add(map.get(list.get(i)[1])+"님이 들어왔습니다.");
+                    break;
+                    
+                    
+                case "Leave": 
+                    move.add(map.get(list.get(i)[1])+"님이 나갔습니다.");
+                    break;
+                default: break;    
+            }
+        }
+        
+        //답안 배열에 담기
+        String[] answer = new String[move.size()];
+        
+        for(int i=0; i<move.size(); i++){
+            answer[i] = move.get(i);
+        }
+        
+        return answer;
+    }
+}

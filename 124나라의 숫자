@@ -1,0 +1,31 @@
+class Solution {
+    public String solution(int n) {
+        //a=1,b=2,c=3,aa=4,ab=5,ac=6,ba=7,bb=8,bc=9,ca=10,cb=11,cc=12,aaa=13
+        // aab=14, aac=15;
+        
+        String str =""; //n값에 따른 나머지를 저장할 문자열
+        
+        //n을 3으로 나눈 나머지에따라 문자열 입력(3으로 나누어 떨어질경우 -3 후 "4" 추가)
+        while(n>=1){
+            
+            if(n%3==0){
+                n-=3;
+                str+="4";                
+            }
+            
+            switch(n%3){
+                case 1: str+="1"; break;
+                case 2: str+="2"; break;                        
+            }
+            
+            n/=3;     
+        }
+        
+        //저장된 문자열 반전
+        StringBuffer sb = new StringBuffer(str);
+        String reverse = sb.reverse().toString();
+     
+        String answer =reverse;
+        return answer;
+    }
+}
